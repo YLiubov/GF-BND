@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+--back-color: #111029;
+--capital: #2cd1c7;
+--footer-color: #1e1c47;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-width: 1200px;
+    background-color: var(--back-color);
+    /* padding: 0px 90px; */
+    color: azure;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* ========= HEADER ========= */
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: var(--back-color);
+    align-items: center;
+    padding: 0px 91px;
+    justify-content: space-between;
+}
+
+header > div > a > img {
+    width: 160px;
+}
+
+header > nav > ul {
+    display: flex;
+    gap: 40px;
+}
+
+header > nav > ul > li {
+    display: block;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+header > nav > ul > li > a {
+    color:azure;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10%;
+}
+
+header > nav > ul > li > a:hover {
+    background-color: var(--capital);
+    align-items: center;
+}
+
+/* ========= MAIN ========= */
+
+main {
+    width: 98%;
+    padding-inline: 1rem;
+    padding-block: 0;
+    /* padding: 0px 90px; */
+}
+
+/* ========= DIV ========= */
+
+div {
+    /* padding: 0px 0px; */
+}
+
+main > div > img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: center;
+}
+
+main > h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--capital);
+    font-size: 5vw;
+    font-weight: lighter;
+    margin: 1.1vw;
+}
+
+/* ========= SECTION ========= */
+
+main > section {
+    display: flex;
+    width: 100%;
+}
+
+section > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+    justify-content: center;
+    padding: 0;
+}
+
+section > ul > li {
+    width: calc((100% - 24px * 4) / 4);
+}
+
+body > main > section > ul > li > img {
+    width: 100%;
+}
+
+section > ul > li > div > h2 {
+    color: var(--capital);
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+section > ul > li > div > p {
+    color: azure;
+    font-weight: lighter;
+}
+
+section > ul > li > div > a {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--capital);
+    font-weight: lighter;
+}
+
+section > ul > li > div > a:hover {
+    text-decoration: underline;
+}
+
+/* ========= IMG ========= */
+
+body > main > img {
+    display: flex;
+    justify-self: center;
+    width: 200px;
+    margin: 5rem 0;
+}
+
+/* ========= ARTICLE ========= */
+
+article {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 64px 24px;
+    padding-bottom: 10rem;
+}
+
+article > figure {
+    margin: 0;
+    width: 50%;
+}
+
+article > figure > img {
+    width: 100%;
+}
+
+article > figure > h3 {
+    color: azure;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+article > figure > p {
+    text-align:justify;
+    color: azure;
+}
+
+article > figure > a {
+    display: flex;
+    justify-content: flex-end;
+
+    color: var(--capital);
+    font-weight: lighter;
+}
+
+article > figure > a:hover {
+    text-decoration: underline;
+}
+
+/* ========= FOOTER ========= */
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* display: flex; */
+    /* justify-content: center; */
+    /* grid-template-columns: 1fr auto; */
+    /* align-items: center; */
+    gap: 2rem;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    background-color: var(--footer-color);
+    padding: 60px 0px;
+}
+
+form {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form > h3 {
+    color: var(--capital);
+    font-size: 29px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+form > input[type="text"], input[type="email"]{
+    background-color: transparent;
+    color: azure;
+    cursor: pointer;
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+}
+
+form > input::placeholder {
+    color: #ccc;
+    opacity: 0,2rem;
+}
+
+form > input:focus {
+    outline: none;
+    border: var(--capital) 1px solid;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+form > input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px var(--footer-color) inset;
+    -webkit-text-fill-color: white;
+    font-size: 1rem;
+}
+
+form > div {
+    display: flex;
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+}
+
+form > div > button {
+    cursor: pointer;
+    background-color: transparent;
+    color: azure;
+    padding: 0.8rem;
+    border: 2px solid var(--capital);
+    background-color: transparent;
+    transition: 0.5s ease;
+    font-size: 1rem;
+}
+
+form > div > button:hover {
+    border: var(--capital) 1px solid;
+    background-color: var(--capital);
+    transition: background-color 0.3s ease;
+}
+
+form > div > label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: azure;
+}
+
+form > div > label > input {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+footer > figure > a {
+    display: flex;
+    justify-content: flex-end;
+}
